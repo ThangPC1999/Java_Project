@@ -1,28 +1,63 @@
 import java.util.Scanner;
 
 public class Main {
+    private String name;
     public static void main(String[] args) throws Exception {
         Main obj = new Main();
         // Scanner input = new Scanner(System.in);
-        String userChoise = obj.getUserChoise();
-        String computerChoise = obj.getComputerChoise();
-        String result = obj.getResult(computerChoise, userChoise);
-        System.out.println("User Input: " + userChoise);
-        System.out.println("Computer Choice: " + computerChoise);
-        System.out.println(result);
+        // String userChoise = obj.getUserChoise();
+        // String computerChoise = obj.getComputerChoise();
+        // String result = obj.getResult(computerChoise, userChoise);
+        // System.out.println("User Input: " + userChoise);
+        // System.out.println("Computer Choice: " + computerChoise);
+        // System.out.println(result);
         // int number = input.nextInt();
-        // // // int reversedNumber = obj.findReverse(number);
-        // // // obj.checkPalindrome(number, reversedNumber);
-        // // obj.checkPrime(number);
+        // int reversedNumber = obj.findReverse(number);
+        // obj.checkPalindrome(number, reversedNumber);
+        // obj.checkPrime(number);
         // char test = '4';
         // int asciiValue = test;
         // System.out.println(asciiValue);
+        Emloyee employee1 = new Emloyee("Felix", 25213.53);
+ 
+        // increase salary by 20%
+        employee1.setSalary(20.00);
+        double newSalary = employee1.getSalary();
+        System.out.println("Name: " + employee1.name + "\nNew Salary: " + newSalary);
+ 
+        // compute salary of Maria
+        Emloyee employee2 = new Emloyee("Maria", 873223.32);
+ 
+        // increase salary by 15.37%
+        employee2.setSalary(15.37);
+        newSalary = employee2.getSalary();
+        System.out.println("Name: " + employee2.name + "\nNew Salary: " + newSalary);
+    } 
+    
+    class Triangle {
+        // create two fields
+        int base;
+        int height;
         
+        // initialize value of base and height
+        Triangle(int base, int height) {
+            this.base = base;
+            this.height = height;
+        }
         
-
-        
-
+        // compute the area of the right-angled triangle
+        double computeArea() {
+            double area =(double) 1/2 * (this.base * this.height);
+            return area;
+        }
     }
+
+    public void setName (String name) {
+        this.name = name;
+    }
+    public String getName() {
+        return this.name;
+      }
 
     public int findReverse(int number) {
         int reverse = 0;
